@@ -287,14 +287,14 @@ function App() {
           Authorizor: {authorizor}
         </Text>
         <Text mb="40px" mt="10px" color="gray.300" display="block" fontSize="sm" p="10px" pb="0px" textAlign="center">
-          isReleaser? {authorizor.toString() === address.toString() ? "yes" : "no"} <br/>
-          isAuthorizor? {releaser.toString() === address.toString() ? "yes" : "no"}
+          isReleaser? {releaser.toString() === address.toString() ? "yes" : "no"} <br/>
+          isAuthorizor? {authorizor.toString() === address.toString() ? "yes" : "no"}
         </Text>
         <Box width="250px" height="1px" bg="gray.700" ml="auto" mr="auto" mt="10px" mb="10px" />
         <Text color="gray.500" display="block" fontSize="2xl" p="10px" pb="0px" textAlign="center">
           Promo+Airdrop (10m ASKO, authorize - release pattern)
         </Text>
-        { authorizor.toString() === address.toString() &&
+        { releaser.toString() === address.toString() &&
           (<>
             <TxAmountButtonGroup
               web3={web3}
@@ -312,7 +312,7 @@ function App() {
             </TxAmountButtonGroup>
           </>)
         }
-        { releaser.toString() === address.toString() &&
+        { authorizor.toString() === address.toString() &&
           (<>
             <TxAmountButtonGroup
               web3={web3}
