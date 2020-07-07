@@ -8,7 +8,7 @@ export default function Header({web3, address, onConnect}) {
     <>
     <Flex maxW="100vw" h="70px" align="center" >
       <Image src="/logo.png" alt="Askobar Logo" display="inline-block" m="20px" w="50px" h="50px" />
-      <Heading as="h1" display="inline-block" mt="-10px">Askobar Staking</Heading>
+      <Heading as="h1" display="inline-block" mt="-10px">Askobar Admin</Heading>
       { (web3 && address) ?
         (<Box ml="auto" display="inline-block">
           <Blockie address={address} size={40} />
